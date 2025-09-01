@@ -14,7 +14,7 @@
       .wrap {
         max-width:980px;
         margin:28px auto;
-        padding:0 20px
+        padding:0 20px;
       }
       a {
         color:#f6492e;
@@ -22,50 +22,52 @@
         border-bottom:1px dashed transparent
       }
       a:hover {
-        border-bottom-color:#f6492e
+        border-bottom-color:#f6492e;
       }
       header h1 {
         margin:0 0 6px;
-        font-size:28px
+        font-size:28px;
       }
       header p {
         margin:0 0 18px;
         color:#666666
+        line-height: 1.6;  /* 줄 간격 글자 크기의 1.6배 */
       }
       .grid {
         display:grid;
         gap:14px;
-        grid-template-columns:repeat(auto-fill,minmax(240px,1fr))
+        grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
       }
       .card {
-        border:1px solid #e6e6e6;
-        border-radius:12px;  /* 모서리 둥글게 */
-        overflow:hidden;  /* 안쪽 이미지 넘치면 잘라내기 */
+        border: 1px solid #e6e6e6;
+        border-radius: 12px;  /* 모서리 둥글게 */
+        overflow: hidden;  /* 안쪽 이미지 넘치면 잘라내기 */
         background:#fafafa;
       }
       .card img {
-        display:block;  /* 이미지를 블록 요소로 (줄바꿈 됨) */
-        width:100%;  /* 카드의 가로푹 완전 채움 */
-        height:auto;  /* 세로의 비율은 자동 (원본 비율 유지) */
+        display: block;  /* 이미지를 블록 요소로 (줄바꿈 됨) */
+        width: 100%;  /* 카드의 가로푹 완전 채움 */
+        height: auto;  /* 세로의 비율은 자동 (원본 비율 유지) */
       }
       .card .cap {
-        padding:10px 12px;
-        font-size:14px;
-        color:#000000;
+        padding: 10px 12px;
+        font-size: 14px;
+        color: #000000;
       }
       .section {
-        margin:22px 0;  /* 섹션마다 위아래 여백 22px */
+        margin: 22px 0;  /* 섹션마다 위아래 여백 22px */
       }
       .back {
-        display:inline-block;  /* 인라인 + 블록 성격 (여백 적용 가능) */
-        margin:8px 0 19px;  /* 위 8px, 아래 18px 여백 */
-        padding:9px 11px;  /* 안쪽 여백 */
-        border:1px solid #000000;
-        border-radius:999px;  /* 동그란 버튼 모양 */
+        display: inline-block;  /* 인라인 + 블록 성격 (여백 적용 가능) */
+        margin: 8px 0 19px;  /* 위 8px, 아래 18px 여백 */
+        padding: 9px 11px;  /* 안쪽 여백 */
+        border: 1px solid #000000;
+        border-radius: 999px;  /* 동그란 버튼 모양 */
       }
       h2 {
         margin:19px 0 11px;  /* 위쪽 18, 아래쪽 11px */
         font-size:20px;  /* 중간크기 제목 */
+      }
     </style>
   </head>
   <body>
@@ -83,7 +85,13 @@
       <div class="section">
         <h2>이미지 갤러리</h2>
         <div class="grid">
+          <!-- 카드 1 -->
           <figure class="card">
-            <img src=
+            <img src="/images/AC1.png" alt="아르 크레아토">
+            <img src="/images/ACRN_ZERO.png" alt="RN-제로 근접전투형 메카">
+          </figure>
+        </div>
+      </div>
+    </div>   
   </body>
 </html>
