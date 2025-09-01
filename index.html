@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>CREATO STORY</title>
-    <style>
+    <style>  /* CSS 문서의 방식은 주석은 [/*...*/] */
       /*스타일 양식 및 레이아웃 */
       :root {
         /* 웹페이지 전체에 공통으로 쓸 "변수공간" */
@@ -22,10 +22,11 @@
         font-family: ui-sans-serif, system-ui, Arial;  /* ui-sans : 운영체제 추천 기본 산세리프, system-ui : 운영체제의 UI 글꼴, Arial : 전통적 웹 안전폰트 */
         color:var(--text);  /* 기본 글자 색을 위에서 정의한 --text 색으로 지정 */
         background:
-          radial-gradient(1200px 600px at 10% -10%, #0c74d5 0%, transparent 60%),  /* 동그랗게 번지는 빛 효과 */
-          radial-gradient(1000px 500px at 110% 10%, #f6492e 0%, transparent 55%),
+          radial-gradient(800px 400px at 0% 50%, #0c74d5 0%, transparent 45%),  /* 동그랗게 번지는 빛 효과 */
+          radial-gradient(800px 400px at 100% 50%, #f6492e 0%, transparent 55%),
           var(--bg);  /* 마지막에 아예 기본 배경 색 */
         background-repeat: no-repeat;
+        background-attachment: fixed;  /* 스크롤해도 고정 */
       }
       /* =============================== */
       .wrap {  /* 내용 감싸는 박스 */
@@ -95,14 +96,14 @@
 
       .hero {
         text-align: center;  /* 텍스트 중앙 정렬 */
-        background: var(#fefde5);
+        background: #fefde5;
         padding: 40px 20px;
         border-radius: 12px;
         margin-bottom: 40px;
       }
       .hero h1 {
         margin: 0;
-        font-size: 40ox;
+        font-size: 40px;
         color: var(--accent2);  /* 제목 글자 색 */
       }
       .hero p {
@@ -120,7 +121,7 @@
     <p> 여기는 CREATO STORY 전용 공식 사이트입니다.</p>
     </div>
 
-    <h2>메카 파일럿 각종 이미지 모음입니다.</h2>
+    <h2>메카 파일럿 작품관련 이미지 및 세계관 설명입니다.</h2>
     <ul>
       <li><a href="/characters/Ar-RNZERO.html">아르 & RN-제로</a></li>
       <li><a href="/characters/Aria-RNZEROONE.html">아리아 & RN-제로원</a></li>
