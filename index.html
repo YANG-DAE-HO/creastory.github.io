@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CREATO STORY</title>
+    <style>
+      /*스타일 양식 및 레이아웃 */
+      :root {
+        /* 웹페이지 전체에 공통으로 쓸 "변수공간" */
+        --bg:#400301;  /* 배경 */
+        --card:#cae2fa;  /* 카드 배경 */
+        --text:#000000;  /* 본문 글자 */
+        --muted:#a19f9f; /* 보조 글자 */
+        --accent1:#0c74d5; /* 강조 글자 1 */
+        --accent2:#f6492e; /* 강조 글자 2 */
+        --border:#000000; /* 테두리 */
+      }
+      /* ================================ */
+      *{box-sizing:border-box}  /* 모든 사이즈에 적용 - 크기 계산 시 테두리(border)까지 포함해서 계산해라. */
+      body{
+        margin:0;  /* 기본 여백 제거 */
+        font-family: ui-sans-serif, system-ui, Arial;  /* ui-sans : 운영체제 추천 기본 산세리프, system-ui : 운영체제의 UI 글꼴, Arial : 전통적 웹 안전폰트 */
+        color:var(--text);  /* 기본 글자 색을 위에서 정의한 --text 색으로 지정 */
+        background:
+          radial-gradient(1200px 600px at 10% -10%, #0c74d5 0%, transparent 60%),  /* 동그랗게 번지는 빛 효과 */
+          radial-gradient(1000px 500px at 110% 10%, #f6492e 0%, transparent 55%),
+          var(--bg);  /* 마지막에 아예 기본 배경 색 */
+        line-height:1.6;  /* 줄 간격을 글자 크기의 1.6배로 */
+      }
+      /* =============================== */
+      .wrap {  /* 내용 감싸는 박스 */
+        max-width:960px;  /* 폭을 최대 크기를 숫자만큼까지만 */
+        margin:56px auto;  /* 위아래 여백 56px, 좌우는 좌동 → 가운데 정렬 */
+        padding:0 20px;  /* 양 옆 안쪽 여백 20px*/
+      }
+      header h1{  /* 큰 제목 스타일 */
+        margin:0 0 8px 0;
+        font-size:32px;
+        letter-spacing:0.3px;  /* 글자 크기 큼 */
+      } 
+      header p{  /* 제목 밑 설명 글*/
+        margin:0 0 24px 0;
+        color:var(--muted);
+      }
+      /* ================================= */
+      .grid {  /* 격자 배치 (카드 여러 개를 그리드로 나열) */
+        display:grid;
+        grid-template-columns:repeat(auto-fill, minmax(260px,1fr));  /* 화면이 넓으면 여러 칸, 좁으면 자동 줄바꿈*/
+        gap:16px;  /* 카드 사이 간격 */
+      }
+      .card {  /* 각 항목을 감싸는 카드 박스 */
+        background:var(--card);
+        border:1px solid var(--border);
+        border-radius:16px;  /* 모서리 둥글게 라운드 사각형 느낌 */
+        padding:16px 14px;  /* 카드 안쪽 여백 (위,아래 16px, 좌우 14px) */
+        transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;  /* 커서 대면 부드럽게 변함 */
+      }
+      .card:hover {  /* 마우스 올리면 살짝 위로 뜨고 그림자 생김 */
+        transform:translateY(-2px);  /* 카드를 숫자만큼 살짝 들어 올린 것처럼 보이게 함 */
+        border-color:#285aa8;
+        box-shadow:0 8px 20px rgba(0,0,0,.25);  /* 그림자 효과 추가, 가로 0px, 세로 8px, 블러 20px, 색은 반투명 검정 rgba(0,0,0,0.25)*/
+      }
+      .title {  /* 카드 제목 */
+        display:flex; align-items:center; gap:10px;
+        font-size:18px; margin:0 0 10px 0;
+      }
+      .badge {  /* 작은 태그 모양 */
+        display:inline-block;
+        padding:2px 8px;
+        border:1px solid #285aa8;
+        border-radius:999px;
+        font-size:12px;
+        color:var(--muted);
+      }
+      .list {margin:0; padding:0; list-style:none}  /* UI/LI 목록을 기본 점표시 없이 깔끔하게 */
+      .list li {margin:6px 0}
+      .link {  /* 링크 스타일 → 기본은 글자 색, 밑줄 없음 */
+        display:inline-flex; align-items:center; gap:6px;
+        text-decoration:none; color:var(--text);
+        border-bottom:1px dashed transparent;
+      }
+      .link:hover {  /* 마우스 올리면 글자색 (--accent2) 밑줄은 점선으로 */
+        color:var(--accent2);
+        border-bottom-color:var(--accent2)
+      }
+      .arrow {  /* 옆에 있는 화살표 → 마우스 올리면 살짝 오른쪽으로 이동 */
+        opacity:.8;
+        transition:transform .15s
+      }
+      .link:hover .arrow {
+        transform:translateX(3px)
+      }
+      hr {border:none; border-top:1px solid var(--border); margin:28px 0}  /* 구분선 */
+      footer{color:var(--muted); font-size:13px}  /* 맨 아래 글자 */
+    </style>
+  </head>
+  <body>
+    <!-- 큰 제목 -->
+    <h1> 📜CREATO STORY 📜 </h1>
+    <!-- 문단 -->
+    <p> 여기는 CREATO STORY 전용 공식 사이트입니다.</p>
+
+    <h2>메카 파일럿 각종 이미지 모음입니다.</h2>
+    <ul>
+      <li><a href="/characters/Ar-RNZERO.html">아르 & RN-제로</a></li>
+      <li><a href="/characters/Aria-RNZEROONE.html">아리아 & RN-제로원</a></li>
+      <li><a href="/characters/Bell-RNZEROTWO.html">벨 & RN-제로투</a></li>
+      <li><a href="/characters/Sel-RNZEROTHREE.html">셀 & RN-제로쓰리</a></li>
+      <li><a href="/characters/Lian-RNZEROALPHA.html">리안 & RN-제로알파</a></li>
+      <li><a href="/characters/Senel-RNZEROBETA.html">센엘 & RN-제로베타</a></li>
+      <li><a href="/characters/Obel-RRnEDEN.html">오벨 & RRn-이든</a></li>
+      <li><a href="/characters/Gellid-RNZEROVAILANT.html">겔리드 & RN-제로베일런트</a></li>
+      <li><a href="/characters/Sophia-PSAEGIS.html">소피아 & PS-이지스</a></li>
+      <li><a href="/characters/BloodLord-Crown.html">블러디로드-크라운</a></li>
+    </ul>
+
+    
+  </body>
+</html>
