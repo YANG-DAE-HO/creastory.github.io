@@ -57,13 +57,19 @@
       .grid {
         display: grid;
         gap: 14px;
-        grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(475px,1fr));
       }
       .card {
-        border: 10px solid #000000;  /* 이미지 외부 테두리 */
+        border: 2px solid #000000;  /* 이미지 외부 테두리 */
         border-radius: 12px;  /* 모서리 둥글게 */
         overflow: hidden;  /* 안쪽 이미지 넘치면 잘라내기 */
         background: #fafafa;
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* 데스크탑에서 두장 나란히 */
+        gap: 10px;
+      }
+      @media (max-width: 720px) {  /* 모바일에서는 자동으로 세로로 쌓이게 */
+        .card { grid template-columns: 1fr; }
       }
       .card img {
         display: block;  /* 이미지를 블록 요소로 (줄바꿈 됨) */
