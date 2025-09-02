@@ -8,11 +8,7 @@
       :root {
         /* 웹페이지 전체에 공통으로 쓸 "변수공간" */
         --bg:#ffffff;  /* 배경 */
-        --card:#cae2fa;  /* (밝은 하늘색)카드 배경 */
         --text:#f6492e;  /* 본문 글자 */
-        --muted:#a19f9f; /* (밝은 회색)보조 글자 */
-        --accent1:#0c74d5; /* 강조 글자 1 */
-        --accent2:#f6492e; /* 강조 글자 2 */
         --border:#000000; /* 테두리 */
       }
       /* ================================ */
@@ -32,52 +28,8 @@
       .wrap {  /* 내용 감싸는 박스 */
         max-width: 1900px;  /* 폭을 최대 크기를 숫자만큼까지만 */
         margin: 40px auto;  /* 위아래 여백 56px, 좌우는 좌동 → 가운데 정렬 */
-        padding: 0 20px;  /* 양 옆 안쪽 여백 20px*/
+        padding: 0 30px;  /* 양 옆 안쪽 여백 20px*/
       }
-      header h1{  /* 큰 제목 스타일 */
-        margin: 0 0 9px 0;
-        font-size: 55px;  /* <h1> 글자 크기 */
-        letter-spacing: 0.3px;  /* 글자 크기 큼 */
-      } 
-      header p{  /* 제목 밑 설명 글*/
-        margin: 0 0 24px 0;
-        color: #000000;
-      }
-      /* ================================= */
-      
-      .title {  /* 카드 제목 */
-        display:flex; align-items:center; gap:10px;
-        font-size:18px; margin:0 0 10px 0;
-      }
-      .badge {  /* 작은 태그 모양 */
-        display:inline-block;
-        padding:2px 8px;
-        border:1px solid #000000;
-        border-radius:999px;
-        font-size:12px;
-        color:var(--muted);
-      }
-      .list {margin:0; padding:0; list-style:none}  /* UI/LI 목록을 기본 점표시 없이 깔끔하게 */
-      .list li {margin:6px 0}
-      .link {  /* 링크 스타일 → 기본은 글자 색, 밑줄 없음 */
-        display:inline-flex; align-items:center; gap:6px;
-        text-decoration:none; color:var(--text);
-        border-bottom:1px dashed transparent;
-      }
-      .link:hover {  /* 마우스 올리면 글자색 (--accent2) 밑줄은 점선으로 */
-        color:var(--accent2);
-        border-bottom-color:var(--accent2)
-      }
-      .arrow {  /* 옆에 있는 화살표 → 마우스 올리면 살짝 오른쪽으로 이동 */
-        opacity:.8;
-        transition:transform .15s
-      }
-      .link:hover .arrow {
-        transform:translateX(3px)
-      }
-      hr {border:none; border-top:1px solid var(--border); margin:28px 0}  /* 구분선 */
-      footer{color:var(--muted); font-size:13px}  /* 맨 아래 글자 */
-
       .hero {
         text-align: center;  /* 텍스트 중앙 정렬 */
         background: #fefde5;  /* hero 부분 📜 CREATO STORY 📜 배경색 */
@@ -96,6 +48,34 @@
         color: #000000;  /* 설명 글자 색 */
         font-weight: bold;  /* 볼드체 적용 */
       }
+      header h1{  /* 큰 제목 스타일 */
+        margin: 0 0 9px 0;
+        font-size: 55px;  /* <h1> 글자 크기 */
+        letter-spacing: 0.3px;  /* 글자 크기 큼 */
+      } 
+      header p{  /* 제목 밑 설명 글*/
+        margin: 0 0 24px 0;
+        color: #000000;
+      }
+      
+      /* 링크 전역 스타일: 항상 검정, 밑줄 없음, 방문색 고정 */
+      
+      a:link,
+      a:visited,
+      a:hover,
+      a:active {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      /* 제목(h2) 과 목록 기본 여백 미세 조정 */
+      h2 { margin: 0 0 12px 0;  color: #000000; }  /* 제목을 검정으로 보이게 */
+      ul { margin: 0; padding-left: 18px }  /* 기본 점표시 유지 */
+      li { margin: 6px 0 }
+      
+      hr {border:none; border-top:1px solid var(--border); margin:28px 0}  /* 구분선 */
+      footer{color:var(--muted); font-size:13px}  /* 맨 아래 글자 */
+     
     </style>
   </head>
   <body>
@@ -106,6 +86,12 @@
     <p> 여기는 CREATO STORY 전용 공식 사이트입니다.</p>
     </div>
 
+    <!-- 좌우 여백과 가운데 정렬을 위해 wrap을 실제로 사용 -->
+    <div class="wrap">
+      <!-- 2열 레이아웃 시작: 왼쪽(본문) / 오른쪽 (메모) -->
+      <div class="grid">
+        <!-- 왼쪽: 제목 + 링크 목록 -->
+        <main>
     <h2>메카 파일럿 작품 관련 이미지 및 세계관 설명입니다.</h2>
     <ul>
       <li><a href="/info/World-Story.html">세계관 및 제국 설명</a></li>
@@ -120,7 +106,7 @@
       <li><a href="/characters/Sophia-PSAEGIS.html">소피아 & PS-이지스</a></li>
       <li><a href="/characters/BloodLord-Crown.html">블러디로드-크라운</a></li>
     </ul>
-
+        </main>
     
   </body>
 </html>
