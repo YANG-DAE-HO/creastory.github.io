@@ -44,23 +44,7 @@
         color: #000000;
       }
       /* ================================= */
-      .grid {  /* 격자 배치 (카드 여러 개를 그리드로 나열) */
-        display:grid;
-        grid-template-columns:repeat(auto-fill, minmax(260px,1fr));  /* 화면이 넓으면 여러 칸, 좁으면 자동 줄바꿈*/
-        gap:16px;  /* 카드 사이 간격 */
-      }
-      .card {  /* 각 항목을 감싸는 카드 박스 */
-        background:var(--card);
-        border:1px solid var(--border);
-        border-radius:16px;  /* 모서리 둥글게 라운드 사각형 느낌 */
-        padding:16px 14px;  /* 카드 안쪽 여백 (위,아래 16px, 좌우 14px) */
-        transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;  /* 커서 대면 부드럽게 변함 */
-      }
-      .card:hover {  /* 마우스 올리면 살짝 위로 뜨고 그림자 생김 */
-        transform:translateY(-2px);  /* 카드를 숫자만큼 살짝 들어 올린 것처럼 보이게 함 */
-        border-color:#285aa8;
-        box-shadow:0 8px 20px rgba(0,0,0,.25);  /* 그림자 효과 추가, 가로 0px, 세로 8px, 블러 20px, 색은 반투명 검정 rgba(0,0,0,0.25)*/
-      }
+      
       .title {  /* 카드 제목 */
         display:flex; align-items:center; gap:10px;
         font-size:18px; margin:0 0 10px 0;
@@ -109,7 +93,7 @@
       .hero p {
         margin: 12px 0 0 0;
         font-size: 25px;
-        color: var(--text);  /* 설명 글자 색 */
+        color: #000000;  /* 설명 글자 색 */
         font-weight: bold;  /* 볼드체 적용 */
       }
     </style>
