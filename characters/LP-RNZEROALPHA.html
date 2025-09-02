@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>리안 & RN-제로알파 - 소개</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: ui-sans-serif,system-ui,Arial;
+        background: #5e0b0b;  /* 배경 페이지 색상 */
+        color: #ffffff;
+      }
+      .wrap {
+        max-width: 1900px;
+        margin: 28px auto;
+        padding: 0 20px;
+      }
+      a {
+        color: #ffffff;  /* 기본 내용 - "리안 폴리팔코 & [RN-제로알파] 색상 (h1)" - */
+        text-decoration: none;
+        border-bottom: 1px dashed transparent
+      }
+      a:hover {
+        border-bottom-color: #ffffff;
+      }
+      header h1 {
+        margin: 0 0 6px;
+        font-size: 95px;  /* (h1) 글짜 크기 */
+      }
+      header p {
+        margin: 0 0 19px;
+        color: #f2dcdc;
+        line-height: 1.6;  /* 줄 간격 글자 크기의 1.6배 */
+      }
+      header P{
+        margin: 0 0 19px;
+        line-height: 1.8;
+        color: #ffffff;  /* <header>의 <p> 부분의 글자 색 */
+        font-size: 20px;
+      }
+      header p.lead {
+        font-size: 25px;  /* <p class="lead"> 글자 크기 */
+      }
+      .accent {  /* 해당 색으로 강조 */
+        color: #fefde5;
+        font-weight: 900;
+        font-size: 40px;
+      }
+      .strong {  /* 굵게만 볼드체 */
+        font-weight: 900;
+        font-size: 35px;
+      }
+      .muted {  /* 보조설명 색 */
+        color: #bfaeae;
+      }
+      .grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit,minmax(475px,1fr));
+      }
+      .card {
+        border: 2px solid #000000;  /* 이미지 외부 테두리 */
+        border-radius: 12px;  /* 모서리 둥글게 */
+        overflow: hidden;  /* 안쪽 이미지 넘치면 잘라내기 */
+        background: #fafafa;
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* 데스크탑에서 두장 나란히 */
+        gap: 10px;
+      }
+      @media (max-width: 720px) {  /* 모바일에서는 자동으로 세로로 쌓이게 */
+        .card { grid-template-columns: 1fr; }
+      }
+      .card img {
+        display: block;  /* 이미지를 블록 요소로 (줄바꿈 됨) */
+        width: 100%;  /* 카드의 가로푹 완전 채움 */
+        height: auto;  /* 세로의 비율은 자동 (원본 비율 유지) */
+      }
+      .card .cap {
+        padding: 10px 12px;
+        font-size: 14px;
+        color: #ebed68;
+      }
+      .section {
+        margin: 22px 0;  /* 섹션마다 위아래 여백 22px */
+      }
+      .back {
+        display: inline-block;  /* 인라인 + 블록 성격 (여백 적용 가능) */
+        margin: 8px 0 19px;  /* 위 8px, 아래 18px 여백 */
+        padding: 9px 11px;  /* 안쪽 여백 */
+        border: 2px solid #ebed68;  /* HOME 버튼 외부 태두리 */
+        border-radius: 999px;  /* 동그란 버튼 모양 */
+      }
+      h2 {
+        margin: 19px 0 11px;  /* 위쪽 18, 아래쪽 11px */
+        font-size: 30px;  /* 중간크기 제목 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="/">← HOME</a>
+      <header>
+        <h1>리안 폴리팔코 & [RN-제로알파]</h1>
+        <p class="lead">
+          벨리움 제국만이 아니라 다른 제국에서까지 유명한 <strong class="accent">"하늘의 여왕으로 알려져 있으며 벨리움 제국에서 공중전
+          가문인 폴리팔코(POLIFALCO) 가문"</strong> 은 벨리움 제국 내에서 영향력이 세다.
+        </p>
+
+        <p>
+          <span class="strong"> 벨리움 제국 특성 상 여존남비 사상으로 인해서 평소의 남성에 대해 무시</span> 하고 있으며 벨리움 제국 내에서 영향
+          력이 센 가문의 후계자로써 늘 냉정한 태도, 말투, 성격을 지니고 있다.
+        </p>
+
+        <p>
+          <strong class="accent">"폴리팔코(POLIFALCO) 가문의 유일한 여성 후계자"</strong>이고 <strong class="accent">[RN-제로알파]</strong>
+          메카는 <strong class="accent">리안 전용 메카</strong>로 설계되었다. 메카 동력을 만들어 내는 에센스 코어 중에서 <strong> 두번째로 높은
+          등급의 H(HIGH-END)급 코어가 탑재</strong>되었으며 해당 코어로 인해서 <strong class="accent"> 공중전특화 메카로써 최고의 성능을 자랑</strong>
+          한다.
+        </p>
+      </header>
+
+      <div class="section">
+        <h2>이미지 갤러리</h2>
+        <div class="grid">
+          <!-- 카드 1 -->
+          <figure class="card">
+            <img src="https://creatostory.com/images/LP1.png" alt="LP1">
+            <img src="https://creatostory.com/images/LPRN-ZEROALPHA.png" alt="LPRN_ZERO_ALPHA">
+            <img src="https://creatostory.com/images/LP_A1.png" alt="LP_A1">
+            <img src="https://creatostory.com/images/LP_Di.png" alt="LP_Di">
+            <img src="https://creatostory.com/images/LP_SF1lian.png" alt="LP_SF1lian">
+          </figure>
+        </div>
+      </div>
+    </div>   
+  </body>
+</html>
