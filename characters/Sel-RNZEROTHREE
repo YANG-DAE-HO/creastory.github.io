@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>셀 비시아리 & RN-제로쓰리 - 소개</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: ui-sans-serif,system-ui,Arial;
+        background: #5e0b0b;  /* 배경 페이지 색상 */
+        color: #ffffff;
+      }
+      .wrap {
+        max-width: 1900px;
+        margin: 28px auto;
+        padding: 0 20px;
+      }
+      a {
+        color: #ffffff;  /* 기본 내용 - "셀 비시아리 & [RN-제로쓰리] 색상 (h1)" - */
+        text-decoration: none;
+        border-bottom: 1px dashed transparent
+      }
+      a:hover {
+        border-bottom-color: #ffffff;
+      }
+      header h1 {
+        margin: 0 0 6px;
+        font-size: 95px;  /* (h1) 글짜 크기 */
+      }
+      header p {
+        margin: 0 0 19px;
+        color: #f2dcdc;
+        line-height: 1.6;  /* 줄 간격 글자 크기의 1.6배 */
+      }
+      header P{
+        margin: 0 0 19px;
+        line-height: 1.8;
+        color: #ffffff;  /* <header>의 <p> 부분의 글자 색 */
+        font-size: 20px;
+      }
+      header p.lead {
+        font-size: 25px;  /* <p class="lead"> 글자 크기 */
+      }
+      .accent {  /* 해당 색으로 강조 */
+        color: #fefde5;
+        font-weight: 900;
+        font-size: 40px;
+      }
+      .strong {  /* 굵게만 볼드체 */
+        font-weight: 900;
+        font-size: 35px;
+      }
+      .muted {  /* 보조설명 색 */
+        color: #bfaeae;
+      }
+      .grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit,minmax(475px,1fr));
+      }
+      .card {
+        border: 2px solid #000000;  /* 이미지 외부 테두리 */
+        border-radius: 12px;  /* 모서리 둥글게 */
+        overflow: hidden;  /* 안쪽 이미지 넘치면 잘라내기 */
+        background: #fafafa;
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* 데스크탑에서 두장 나란히 */
+        gap: 10px;
+      }
+      @media (max-width: 720px) {  /* 모바일에서는 자동으로 세로로 쌓이게 */
+        .card { grid-template-columns: 1fr; }
+      }
+      .card img {
+        display: block;  /* 이미지를 블록 요소로 (줄바꿈 됨) */
+        width: 100%;  /* 카드의 가로푹 완전 채움 */
+        height: auto;  /* 세로의 비율은 자동 (원본 비율 유지) */
+      }
+      .card .cap {
+        padding: 10px 12px;
+        font-size: 14px;
+        color: #ebed68;
+      }
+      .section {
+        margin: 22px 0;  /* 섹션마다 위아래 여백 22px */
+      }
+      .back {
+        display: inline-block;  /* 인라인 + 블록 성격 (여백 적용 가능) */
+        margin: 8px 0 19px;  /* 위 8px, 아래 18px 여백 */
+        padding: 9px 11px;  /* 안쪽 여백 */
+        border: 2px solid #ebed68;  /* HOME 버튼 외부 태두리 */
+        border-radius: 999px;  /* 동그란 버튼 모양 */
+      }
+      h2 {
+        margin: 19px 0 11px;  /* 위쪽 18, 아래쪽 11px */
+        font-size: 30px;  /* 중간크기 제목 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="/">← HOME</a>
+      <header>
+        <h1>셀 비시아리 & [RN-제로쓰리]</h1>
+        <p class="lead">
+          판테온 제국에서 유명한 <strong class="accent">"의료특화 가문인 비시아리(VISSIARI) 가문"</strong> 으로 판테온 제국의
+          의료체계에 혁신을 가져왔으며 판테온 제국이 건국 되기 전 레오 드라니아 황가와 크레아토 가문, 레인하트 가문을 지원하면서 판
+          테온 제국의 공작의 지휘를 받게 되었다.
+        </p>
+
+        <p>
+          셀 비시아리 성격은 의젓하고 상냥한 누나같은 성격과 비시아리 가문에서도 내에서도 장녀이기 때문에 자신의 밑에 있는 동생들을 매우 사
+          랑하고 아낍니다. 의료지식도 풍부해서 비시아리 가문에서 운영하고 있는 병원에서도 많은 봉사를 한 적이 있어 <strong class="accent>
+          "백의의 천사"</strong>라는 별명을 가지고 있다.
+        </p>
+
+        <p>
+          <strong class="accent">"비시아리(VISSIARI) 가문의 후계자 구도자에 있는 위치"</strong>이고 <strong class="accent">[RN-제로쓰리]</strong>
+          메카는 <strong class="accent">셀 전용 메카</strong>로 설계되었다. 추가로 메카 동력을 만들어 내는 에센스 코어 중에서 <strong>가장
+          최고로 높은 등급의 P(PERSONAL)급 코어가 탑재</strong>되었으며 <strong class="accent">주무장으로는 [RN제로 서포트 SMG] 특수장비로는
+          [RN제로 메디컬 캡슐 I] 장착되어 있으며 해당 장비는 최대 3인 정도 파일럿을 치료가 가능</strong>하다.
+        </p>
+      </header>
+
+      <div class="section">
+        <h2>이미지 갤러리</h2>
+        <div class="grid">
+          <!-- 카드 1 -->
+          <figure class="card">
+            <img src="https://creatostory.com/images/SV1.png" alt="SV1">
+            <img src="https://creatostory.com/images/ACRN_ZERO_THREE.png" alt="ACRN_ZERO_THREE">
+          </figure>
+        </div>
+      </div>
+    </div>   
+  </body>
+</html>
