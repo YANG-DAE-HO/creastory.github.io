@@ -3,67 +3,162 @@
   <head>
     <meta charset="utf-8">
     <title> ARIA 19 Images </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      /* 기본 */
+      :root { --gap: 16px; }
+      * { box-sizing: border-box; }
       body {
         font-family: ui-sans-serif, system-ui, Arial;
         line-height: 1.9;
         background: #ffffff;
+        margin: 0;
       }
       .wrap {
-        max-width 1900px;
+        max-width: 1900px;
         margin: 40px auto;
         padding: 0 20px;
       }
-      h1 {
-        color: #000000;
-      }
-      p {
-        color: #000000;
-      }
+      h1, p { color: #000000; }
+      
       .back {
-        display: inline-block;
-        margin: 8px 0 18px;
-        padding: 9px 11px;
-        border: 1px solid #ebed68;
-        border-radius: 999px;
+        display: inline-block; margin: 8px 0 18px; padding: 9px 11px;
+        border: 1px solid #ebed68; border-radius: 999px; text-decoration: none; color: #000000;
       }
-      header h1 {
+      .header h1 {
         margin: 0 0 9px 0;
         font-size: 55px;
         letter-spacing: 0.3px;
       }
-      header p {
+      .header p {
         line-height: 1.6;
         margin: 0 0 24px 0;
         color: #000000;
       }
-      hero {
+      .hero {
         text-align: center;
         background: #fefde5;
         padding: 40px 20px;
         border-radius: 12px;
         margin-bottom: 40px;
       }
-      hero h1 {
+      .hero h1 {
         margin 0;
         font-size: 40px;
         color: #f6492e;
       }
-      hero p {
+      .hero p {
         margin: 12px 0 0 0;
         font-size: 25px;
         color: #000000;
-        text-weight: bold;
+        font-weight: bold;
+      }
+
+      /* 갤러리 그리드 */
+      .gallery {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(5, 1fr);  /* 한 줄 = 5칸 */
+      }
+      gallery img {
+        flex: 0 0 auto;  /* 크기가 자동으로 줄어들지 않게 */
+        width: 100%;  /* 원하는 고정 크기 */
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+        transition: transform 1.5s ease;  /* 해당 초 시간동안 변화가 이루어짐. */
+      }
+      .gallery img:hover {
+        transform: scale(1.1);  /* (해당 숫자)배로 확대 */
+      }
+      .tile {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #ffffff;  /* 이미지 로딩 전 배경색 */
+        aspect-ratio: 3 / 4;  /* 전신 / 세로 일러스트에 적합. 필요 시 4/3, 1/1, 16/9로 변경 */
+      }
+      .tile img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;  /* 카드 안을 가득 채우기 */
+        transition: transform 0.5s ease;
+        will-change: transform;  /* 성능 힌트 */
+      }
+      .tile:hover img {  /* hover 확대 */
+        transform: scale(1.1);
       }
     </style>
   </head>
   <body>
-    <div class="hero">
+    <div class="wrap">
+      <div class="hero">
       <a class="back" href="/">← HOME</a>
-      <header>
         <h1> 📜 CREATO STORY 📜 </h1>
         <p> 여기는 CREATO STORY 전용 공식 사이트입니다. </p>
-      </header>
+      </div>
+
+      <!-- 이미지 갤러리 (5장씩 자동 줄바꿈 -->
+      <div class="gallery">
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SF1.png"  alt="AR_SF1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SF2Ud1.png"  alt="AR_SF2Ud1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SF3NC.png"  alt="AR_SF3NC"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SF4.png"  alt="AR_SF4"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_Ud2.png"  alt="AR_Ud2"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_Bi.png"  alt="AR_Bi"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_N1.png"  alt="AR_N1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_N2.png"  alt="AR_N2"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_DE3.png"  alt="AR_DE3"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_LoE4.png"  alt="AR_LoE4"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_K.png"  alt="AR_K"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_BSF1.png"  alt="AR_BSF1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_BS.png"  alt="AR_BS"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_BSC.png"  alt="AR_BSC"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_M1.png"  alt="AR_M1"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_M2aria.png"  alt="AR_M2aria"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MC1.png"  alt="AR_MC1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MCO1.png"  alt="AR_MCO1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MCO2.png"  alt="AR_MCO2"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_D1.png"  alt="AR_D1"></figure>
+        
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_D2B.png"  alt="AR_D2B"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_D3Mi.png"  alt="AR_D3Mi"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_DO1.png"  alt="AR_DO1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_DO2aria.png"  alt="AR_DO2aria"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_DO3B.png"  alt="AR_DO3B"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_DO4TW.png"  alt="AR_DO4TW"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_DC1.png"  alt="AR_DC1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_DCO1Gs.png"  alt="AR_DCO1Gs"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_DCO2Cv.png"  alt="AR_DCO2Cv"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SC1.png"  alt="AR_SC1"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SC2.png"  alt="AR_SC2"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SC_ODD1.png"  alt="AR_SC_ODD1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SC_ODD2aria.png"  alt="AR_SC_ODD2aria"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SC_Ou1.png"  alt="AR_SC_Ou1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SC_Ou2fla.png"  alt="AR_SC_Ou2fla"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_SC_ODD_CO1.png"  alt="AR_SC_ODD_CO1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MP1.png"  alt="AR_MP1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MP2aria.png"  alt="AR_MP2aria"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MP3.png"  alt="AR_MP3"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MP4aria.png"  alt="AR_MP4aira"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MPC1.png"  alt="AR_MPC1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MPC2aria.png"  alt="AR_MPC2aria"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MPC3aria.png"  alt="AR_MPC3aria"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MPC4.png"  alt="AR_MPC4"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MPCk.png"  alt="AR_MPCK"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MPCO1.png"  alt="AR_MPCO1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MPCO2.png"  alt="AR_MPCO2"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19images/AR_MPPOC.png"  alt="AR_MPPOC"></figure>
     </div>
-  </body>
+  </div>
+</body>
 </html>
