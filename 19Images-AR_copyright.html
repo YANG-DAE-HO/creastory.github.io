@@ -43,7 +43,7 @@
         margin-bottom: 40px;
       }
       .hero h1 {
-        margin 0;
+        margin: 0;
         font-size: 40px;
         color: #f6492e;
       }
@@ -60,7 +60,7 @@
         gap: 16px;
         grid-template-columns: repeat(5, 1fr);  /* 한 줄 = [숫자] 칸 */
       }
-      gallery img {
+      .gallery img {
         flex: 0 0 auto;  /* 크기가 자동으로 줄어들지 않게 */
         width: 100%;  /* 원하는 고정 크기 */
         height: auto;
@@ -71,6 +71,8 @@
       .gallery img:hover {
         transform: scale(1.1);  /* (해당 숫자)배로 확대 */
       }
+      
+      /* 타일 */
       .tile {
         position: relative;
         overflow: hidden;
@@ -90,7 +92,7 @@
         transform: scale(1.1);
       }
       /* 라이트 박스 기본 숨김 상태 */
-      .lightcox {
+      .lightbox {
         display: none;  /* 처음엔 안 보임 */
         position: fixed;
         inset: 0;  /* top, right, bottom, left = 0 */
@@ -113,7 +115,7 @@
       /* 등장 애니메이션 */
       @keyframes fadeIn {
         from { opacity: 0; transform: scale(0.9); }
-        to { opocity: 1; transform: scale(1); }
+        to { opacity: 1; transform: scale(1); }
       }
     </style>
   </head>
@@ -194,14 +196,14 @@
 
   <!-- JS 스크립트 -->
   <script>
-    const lightbox = document.getElementById('lightcox');
+    const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('img');
 
     // 모든 갤러리 이미지에 클릭 이벤트 추가
     document.querySelectorAll('.gallery img').forEach(img => {
       img.addEventListener('click', () => {
         lightboxImg.src = img.src;  //  클릭한 이미지 주소 넣기
-        lightcox.style.display = 'flex';  // 라이트박스 켜기
+        lightbox.style.display = 'flex';  // 라이트박스 켜기
       });
     });
 
