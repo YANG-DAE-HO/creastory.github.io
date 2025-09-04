@@ -89,6 +89,32 @@
       .tile:hover img {  /* hover 확대 */
         transform: scale(1.1);
       }
+      /* 라이트 박스 기본 숨김 상태 */
+      .lightcox {
+        display: none;  /* 처음엔 안 보임 */
+        position: fixed;
+        inset: 0;  /* top, right, bottom, left = 0 */
+        background: rgba(0, 0, 0, 0.85);  /* 어두운 반투명 배경 */
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      /* 라이트 박스 안의 이미지 */
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.7);
+        animation: fadeIn 0.2s ease;
+        cursor: pointer;
+      }
+
+      /* 등장 애니메이션 */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opocity: 1; transform: scale(1); }
+      }
     </style>
   </head>
   <body>
@@ -160,5 +186,29 @@
         <figure class="tile"><img src="https://creatostory.com/19-Images/AR_MPPOC.png"  alt="AR_MPPOC"></figure>
     </div>
   </div>
+    
+    <!-- 라이트 박스 컨테이너 -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="확대 이미지">
+  </div>
+
+  <!-- JS 스크립트 -->
+  <script>
+    const lightbox = document.getElementById('lightcox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    // 모든 갤러리 이미지에 클릭 이벤트 추가
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;  //  클릭한 이미지 주소 넣기
+        lightcox.style.display = 'flex';  // 라이트박스 켜기
+      });
+    });
+
+    // 라이트박스를 클릭하면 닫기
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
