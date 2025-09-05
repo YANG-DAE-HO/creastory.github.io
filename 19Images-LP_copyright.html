@@ -1,0 +1,207 @@
+<!doctype>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title> LIAN 19 Images </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* 기본 */
+      :root { --gap: 16px; }
+      * { box-sizing: border-box; }
+      body {
+        font-family: ui-sans-serif, system-ui, Arial;
+        line-height: 1.9;
+        background: #ffffff;
+        margin: 0;
+      }
+      .wrap {
+        max-width: 1900px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      h1, p { color: #000000; }
+      
+      .back {
+        display: inline-block; margin: 8px 0 18px; padding: 9px 11px;
+        border: 1px solid #ebed68; border-radius: 999px; text-decoration: none; color: #000000;
+      }
+      .header h1 {
+        margin: 0 0 9px 0;
+        font-size: 55px;
+        letter-spacing: 0.3px;
+      }
+      .header p {
+        line-height: 1.6;
+        margin: 0 0 24px 0;
+        color: #000000;
+      }
+      .hero {
+        text-align: center;
+        background: #fefde5;
+        padding: 40px 20px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+      }
+      .hero h1 {
+        margin: 0;
+        font-size: 40px;
+        color: #f6492e;
+      }
+      .hero p {
+        margin: 12px 0 0 0;
+        font-size: 25px;
+        color: #000000;
+        font-weight: bold;
+      }
+
+      /* 갤러리 그리드 */
+      .gallery {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(5, 1fr);  /* 한 줄 = [숫자] 칸 */
+      }
+      .gallery img {
+        flex: 0 0 auto;  /* 크기가 자동으로 줄어들지 않게 */
+        width: 100%;  /* 원하는 고정 크기 */
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+        transition: transform 1.5s ease;  /* 해당 초 시간동안 변화가 이루어짐. */
+      }
+      .gallery img:hover {
+        transform: scale(1.1);  /* (해당 숫자)배로 확대 */
+      }
+      
+      /* 타일 */
+      .tile {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #ffffff;  /* 이미지 로딩 전 배경색 */
+        aspect-ratio: 3 / 4;  /* 전신 / 세로 일러스트에 적합. 필요 시 3/4, 4/3, 1/1, 16/9로 변경 */
+      }
+      .tile img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;  /* 카드 안을 가득 채우기 */
+        transition: transform 0.5s ease;
+        will-change: transform;  /* 성능 힌트 */
+      }
+      .tile:hover img {  /* hover 확대 */
+        transform: scale(1.1);
+      }
+      /* 라이트 박스 기본 숨김 상태 */
+      .lightbox {
+        display: none;  /* 처음엔 안 보임 */
+        position: fixed;
+        inset: 0;  /* top, right, bottom, left = 0 */
+        background: rgba(0, 0, 0, 0.85);  /* 어두운 반투명 배경 */
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      /* 라이트 박스 안의 이미지 */
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.7);
+        animation: fadeIn 0.2s ease;
+        cursor: pointer;
+      }
+
+      /* 등장 애니메이션 */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="hero">
+      <a class="back" href="/">← HOME</a>
+        <h1> 📜 CREATO STORY 📜 </h1>
+        <p> 여기는 CREATO STORY 전용 공식 사이트입니다. </p>
+      </div>
+
+      <!-- 이미지 갤러리 (5장씩 자동 줄바꿈 -->
+      <div class="gallery">
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_S1Ou.png"  alt="LP_S1Ou"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_S2.png"  alt="LP_S2"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_LS.png"  alt="LP_LS"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_NC.png"  alt="LP_NC"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_A1.png"  alt="LP_A1"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_A2.png"  alt="LP_A2"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_CS.png"  alt="LP_CS"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_Di.png"  alt="LP_Di"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_HLL_H.png"  alt="LP_HLL_H"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_HLL_S.png"  alt="LP_HLL_S"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_HLL_TS1.png"  alt="LP_HLL_TS1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_HLL_TS2.png"  alt="LP_HLL_TS2"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_HLL_SHY.png"  alt="LP_HLL_SHY"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_SF1lian.png"  alt="LP_SF1lian"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_SF2lian.png"  alt="LP_SF2lian"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_SF3.png"  alt="LP_SF3"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_USF4.png"  alt="LP_USF4"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_SF5.png"  alt="LP_SF5"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_Ud1.png"  alt="LP_Ud1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_Ud2.png"  alt="LP_Ud2"></figure>
+        
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_HLLK.png"  alt="LP_HLLK"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_F1.png"  alt="LP_F1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_F2Ou.png"  alt="LP_F2Ou"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_F3Ou.png"  alt="LP_F3Ou"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_FSB.png"  alt="LP_FSB"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_CP1.png"  alt="LP_CP1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_CP2lian.png"  alt="LP_CP2lian"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_CP3.png"  alt="LP_CP3"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_CPC1.png"  alt="LP_CPC1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_CPCO1.png"  alt="LP_CPCO1"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_CPCO2.png"  alt="LP_CPCO2"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_SC1.png"  alt="LP_SC1"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_.png"  alt="LP_"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_.png"  alt="LP_"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_.png"  alt="LP_"></figure>
+
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_.png"  alt="LP_"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_.png"  alt="LP_"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_.png"  alt="LP_"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_.png"  alt="LP_"></figure>
+        <figure class="tile"><img src="https://creatostory.com/19-Images/LP_.png"  alt="LP_"></figure>
+
+    </div>
+  </div>
+    
+    <!-- 라이트 박스 컨테이너 -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="확대 이미지">
+  </div>
+
+  <!-- JS 스크립트 -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    // 모든 갤러리 이미지에 클릭 이벤트 추가
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;  //  클릭한 이미지 주소 넣기
+        lightbox.style.display = 'flex';  // 라이트박스 켜기
+      });
+    });
+
+    // 라이트박스를 클릭하면 닫기
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
