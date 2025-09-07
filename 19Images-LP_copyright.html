@@ -80,7 +80,14 @@
         background: #ffffff;  /* 이미지 로딩 전 배경색 */
         aspect-ratio: 3 / 4;  /* 전신 / 세로 일러스트에 적합. 필요 시 3/4, 4/3, 1/1, 16/9로 변경 */
       }
+      .tile::before {
+        content: "";
+        display: block;
+        padding-top: 134%;
+      }
       .tile img {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
         display: block;
