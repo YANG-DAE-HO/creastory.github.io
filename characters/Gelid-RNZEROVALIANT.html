@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>겔리드 & RN-제로베일런트 - 소개</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: ui-sans-serif,system-ui,Arial;
+        background: #5e0b0b;  /* 배경 페이지 색상 */
+        color: #ffffff;  /* 전체 글자 색상 */
+      }
+      .wrap {
+        max-width: 1900px;
+        margin: 28px auto;
+        padding: 0 20px;
+      }
+      a {  /* 링크 톤 부분 */
+        color: #ffffff;  /* 기본 내용 -  색상 (h1) - */
+        text-decoration: none;  /* 밑줄 제거 */
+        border-bottom: 1px dashed transparent
+      }
+      a:hover {
+        border-bottom-color: #ffffff;
+      }
+      header h1 {
+        margin: 0 0 6px;
+        font-size: 95px;  /* (h1) 글짜 크기 */
+      }
+      header p {
+        margin: 0 0 19px;
+        color: #f2dcdc;  /* header 일반 문단 */
+        line-height: 1.6;  /* 줄 간격 글자 크기의 1.6배 */
+      }
+      header P{
+        margin: 0 0 19px;
+        line-height: 1.8;
+        color: #ffffff;  /* <header>의 <p> 부분의 글자 색 */
+        font-size: 20px;
+      }
+      header p.lead {
+        font-size: 25px;  /* <p class="lead"> 글자 크기 */
+      }
+      .accent {  /* 해당(색 + 두께  크기) 조건으로 강조 */
+        color: #fefde5;
+        font-weight: 900;
+        font-size: 40px;
+      }
+      .strong {  /* 굵게만 볼드체 */
+        font-weight: 900;
+        font-size: 35px;
+      }
+      .muted {  /* 보조설명 색 */
+        color: #bfaeae;
+      }
+      .grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit,minmax(475px,1fr));
+      }
+      .card {
+        border: 2px solid #000000;  /* 이미지 외부 테두리 */
+        border-radius: 12px;  /* 모서리 둥글게 */
+        overflow: hidden;  /* 안쪽 이미지 넘치면 잘라내기 */
+        background: #fafafa;
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* 데스크탑에서 두장 나란히 */
+        gap: 10px;
+      }
+      @media (max-width: 720px) {  /* 모바일에서는 자동으로 세로로 쌓이게 */
+        .card { grid-template-columns: 1fr; }
+      }
+      .card img {
+        display: block;  /* 이미지를 블록 요소로 (줄바꿈 됨) */
+        width: 100%;  /* 카드의 가로푹 완전 채움 */
+        height: auto;  /* 세로의 비율은 자동 (원본 비율 유지) */
+      }
+      .card .cap {
+        padding: 10px 12px;
+        font-size: 14px;
+        color: #ebed68;
+      }
+      .section {
+        margin: 22px 0;  /* 섹션마다 위아래 여백 22px */
+      }
+      .back {
+        display: inline-block;  /* 인라인 + 블록 성격 (여백 적용 가능) */
+        margin: 8px 0 19px;  /* 위 8px, 아래 18px 여백 */
+        padding: 9px 11px;  /* 안쪽 여백 */
+        border: 2px solid #ebed68;  /* HOME 버튼 외부 태두리 */
+        border-radius: 999px;  /* 동그란 버튼 모양 */
+      }
+      h2 {
+        margin: 19px 0 11px;  /* 위쪽 18, 아래쪽 11px */
+        font-size: 30px;  /* 중간크기 제목 - 해당 페이지에서는 "이미지 갤러리" 라고 적인 부분*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="/">← HOME</a>
+      <header>
+        <h1>겔리드 체스티 & [RN-제로베일런트]</h1>
+        <p class="lead">
+          키셀지아 제국 출신으로 자신의 가문은 중상층에 해당하는 출신이다.
+        </p>
+
+        <p>
+          키셀지아 제국에서 누구한테 아쉬운 손 벌리지 않고 자란 <span class="strong">체스티 가문의 사람으써 메카와 다른 소 · 중형 드론기를 자주
+          접하면서 자랐던 환경에 '메카를 조종하면서 추가로 무인기를 조종할 수 있다면...?' 이런 생각</span> 을 가지게 되면서 자신만의 간편하고 자신
+          이 생각하던 방향으로 프로그램을 작성하기까지 했다.
+        </p>
+
+        <p>
+          <strong class="accent"> 겔리드의 이런 두각성을 알아본 제조사는 직접 컨택해서 자신들과 함께 메카를 만들어 보자는 약속과 함께 메카를 만드는 도중
+          테스트를 위한 시험에서 겔리드만이 원활하게 움직이자 </strong> 제조사에서는 해당 프로젝트를 포기하는 대신 더 범용적인 소프트웨어와 무인기를 해당
+          제조사에게 독점적으로 사용을 할 수 있게 해준다면 메카의 개발에 들어간 돈과 함께 메카를 겔리드에게 판매하겠다는 말을 하면서 겔리드는 이를 수락한다.
+        </p>
+
+        <p>
+          <strong class="accent">[RN-제로베일런트]</strong> <strong class="accent">주무장으로는 [RN제로 15㎜ APCR 미니건] X 2개가 양쪽팔에 장착되어 있고
+          [RN제로 30㎜ 무인 포탑] X 3개(설치형), 추가로 [MDPT 무인 지원 메카], [MDPT 특수 외장 파츠]도 장착</strong>되어 있다.
+        </p>
+
+        <p>
+          <span class="strong">메카의 상세 스펙은 30HP 파워 : 7 / 스피드 : 16 / 사격능력 : 10</span> 이다.
+        </p>
+      </header>
+
+      <div class="section">
+        <h2>이미지 갤러리</h2>
+        <div class="grid">
+          <!-- 카드 1 -->
+          <figure class="card">
+            <img src="https://creatostory.com/images/GS1.png" alt="GS1">
+            <img src="https://creatostory.com/images/GSRN_ZERO_VALIANT.png" alt="GSRN_ZERO_VALIANT">
+          </figure>
+        </div>  <!-- 카드 div class 닫는 부분 -->
+      </div>  <!-- section div class 닫는 부분 -->
+      <!-- 저작권 문구 넣은 위치 -->
+      <footer class="site-footer">
+        <p>ⓒ 2025 CREATO STORY. 본 페이지의 모든 이미지 저작권은 사이트 관리자에게 있습니다.</p>
+      </footer>
+    </div>   <!-- .wrap div class 닫는 부분 -->
+  </body>
+</html>
